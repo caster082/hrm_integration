@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_api_connect_user,api.connect,model_api_connect,,1,1,1,1
+access_api_sales_order,api.connect.sales.order,model_sales_order_integration,,1,1,1,1
+access_api_sales_order_lines,api.connect.sales.order.lines,model_sales_order_lines_integration,,1,1,1,1

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+   <data>
+              <!--Api Connect Form View-->
+       <record id="api_connect_view_form" model="ir.ui.view">
+        <field name="name">api_connect.view.form</field>
+        <field name="model">api_connect</field>
+        <field name="arch" type="xml">
+            <form string="HMS_integration">
+                <header>
+                     <button name="connect_function" string="Link" type="object" class="btn-primary" />
+                </header>
+               <sheet>
+                   <group string="HMS_integration">
+                       <group>
+                           <field name="name"/>
+                           <field name="method"/>
+                       </group>
+                   </group>
+               </sheet>
+            </form>
+        </field>
+        </record>
+
+
+       <!--Api Connect Tree View-->
+    <record id="school_management_view_tree" model="ir.ui.view">
+       <field name="name">api_connect.tree</field>
+       <field name="model">api_connect</field>
+       <field name="arch" type="xml">
+           <tree>
+               <field name="name" string="API" required="1"/>
+               <field name="method" string="Methods" required="1"/>
+           </tree>
+       </field>
+    </record>
+
+       <!--Api Connect Action-->
+      <record id="action_api_connect"
+              model="ir.actions.act_window">
+        <field name="name">Connect</field>
+        <field name="res_model">api_connect</field>
+       <field name="view_mode">tree,form</field>
+       <field name="help" type="html">
+         <p class="o_view_nocontent_smiling_face">
+           Connect With API
+         </p>
+      </field>
+    </record>
+
+        <menuitem id="sales_order_configuration_menu"
+          name="Configuration"
+          parent="hms_integration_menu_root"
+          sequence="1"/>
+        <menuitem id="api_menu"
+          name="Integrations"
+          parent="sales_order_configuration_menu"
+          action="action_api_connect"
+          sequence="1"/>
+
+
+   </data>
+</odoo>
