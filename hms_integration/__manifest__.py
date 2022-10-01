@@ -12,8 +12,8 @@
     # data files always loaded at installation
     'data': [
         'security/ir.model.access.csv',
-        'views/connect.xml',
         'views/so_integration.xml',
+        'views/connect.xml',
     ],
 
     # data files containing optionally loaded demonstration data
@@ -24,7 +24,20 @@
 
     "summary": "Hotel Management Software Integration",
     "application": True,
-    'qweb': [],
+    "qweb": ['static/src/xml/list_controller.xml'],
+
+    'assets': {
+        'web.assets_backend': [
+            #'/hms_integration/static/src/js/list_controller.js',
+            '/hms_integration/static/src/js/tree_view_button.js'
+
+        ],
+        "web.assets_qweb": [
+            #'hms_integration/static/src/xml/list_controller.xml',
+            'hms_integration/static/src/xml/tree_view_button.xml'
+        ],
+    },
+
     "license": "AGPL-3",
     "images": ["static/description/Hotel.png"],
     'installable': True,

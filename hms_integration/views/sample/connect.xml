@@ -8,11 +8,14 @@
         <field name="model">api_connect</field>
         <field name="arch" type="xml">
             <form string="HMS_integration">
+                <header>
+                     <button name="connect_function" string="Link" type="object" class="btn-primary" />
+                </header>
                <sheet>
-                   <group string="HMS integration">
+                   <group string="HMS_integration">
                        <group>
-                           <field name="name" string="Endpoint URL"/>
-                           <field name="method" string="Methods"/>
+                           <field name="name"/>
+                           <field name="method"/>
                        </group>
                    </group>
                </sheet>
@@ -27,7 +30,7 @@
        <field name="model">api_connect</field>
        <field name="arch" type="xml">
            <tree>
-               <field name="name" string="EndPoint URL" required="1"/>
+               <field name="name" string="API" required="1"/>
                <field name="method" string="Methods" required="1"/>
            </tree>
        </field>

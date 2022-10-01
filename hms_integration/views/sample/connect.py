@@ -97,20 +97,18 @@ class connect(models.Model):
 
         if sale_inte_id:
             return {
-                'name': _('Generated Documents'),
-                'res_model': 'sales.order.integration',
                 'type': 'ir.actions.act_window',
-                'context': "{'create': False}",
-                'views': [[False, "tree"], [False, "kanban"], [False, "form"]],
-                'view_mode': 'tree, kanban, form',
+                'name': 'Connected',
+                'view_mode': 'tree',
+                'res_model': 'sales.order.integration',
+                'context': "{'create': False}"
             }
         else:
             return {
-                'name': _('Generated Documents'),
-                'res_model': 'sales.order.integration',
                 'type': 'ir.actions.act_window',
-                'context': "{'create': False}",
-                'views': [[False, "tree"], [False, "kanban"], [False, "form"]],
-                'view_mode': 'tree, kanban, form',
+                'name': 'Connected',
+                'view_mode': 'tree',
+                'res_model': 'sales.order.integration',
+                'context': "{'create': False}"
             }
 
